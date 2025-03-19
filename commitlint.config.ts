@@ -10,7 +10,7 @@ const Configuration: UserConfig = {
     rules: {
         'type-empty': [2, 'never'],
 
-        'type-enum': [2, 'always', ['feat', 'fix', 'hotfix', 'refactor']],
+        'type-enum': [2, 'always', ['feat', 'fix', 'hotfix', 'refactor', 'remove']],
 
         'subject-case': [0],
     },
