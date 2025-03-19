@@ -25,5 +25,5 @@
     /* Custom settings */
     "baseUrl": "./"
   },
-  "include": ["src"]
+  "include": ["src", "config"]
 }

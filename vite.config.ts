@@ -1,8 +1,19 @@
+import { ENV_PREFIX } from './config/env/constants';
+import { validateEnv } from './config/env/index';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
+import checker from 'vite-plugin-checker';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vite.dev/config/
 export default defineConfig({
-    envPrefix: 'APP_',
-    plugins: [react()],
+    envPrefix: ENV_PREFIX,
+    plugins: [
+        react(),
+        validateEnv(),
+        tsconfigPaths(),
+        checker({
+            typescript: { tsconfigPath: 'tsconfig.app.json' },
+        }),
+    ],
 });
