@@ -5,7 +5,13 @@
     "singleQuote": true,
     "trailingComma": "all",
     "plugins": ["@trivago/prettier-plugin-sort-imports"],
-    "importOrder": [],
+    "importOrder": [
+        "^~/app/(.*)$",
+        "^~/pages/(.*)$",
+        "^~/modules/(.*)$",
+        "^~/shared/(.*)$",
+        "^[./]"
+    ],
     "importOrderSeparation": true,
     "importOrderSortSpecifiers": true
 }
